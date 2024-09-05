@@ -13,12 +13,22 @@
             
         </div>
     </div>
+    <div class="buttons">
+        <canvas id="previous" width="400" height="400"></canvas>
+        <canvas id="play/stop" width="400" height="400"></canvas>
+        <canvas id="next" width="400" height="400"></canvas>
+    </div>
     <script src="https://unpkg.com/@rive-app/canvas@2.20.0"></script>
     <script>
         new rive.Rive({
             src: "untitled.riv",
             canvas: document.getElementById("canvas"),
             autoplay: false
+        });
+        new rive.Rive({
+            src: "play_button.riv",
+            canvas: document.getElementById("previous"),
+            autoplay: true
         });
     </script>
 </body>
